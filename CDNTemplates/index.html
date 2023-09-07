@@ -2,6 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -11,8 +14,25 @@
     </div>
     <footer>
 
-        <p>Bottom page footer</p>
+        <p>Bottom  footer</p>
     </footer>
+    <script type="text/babel">
+        // We are going to create React comppnent which is a function, Here we create a comppnent functionality and create template 
+        const BannerId=() =>{
+            return(
+            //The below code is JSX which is like html, Here we are returning JSX template using component function   
+            <p>Banner added as a component into page</p>
+
+
+            )
+            //render the compnent template to DOM to inject into HTML page
+        }        
+    
+    
+        ReactDOM.render(<BannerId/>,document.getElementById('banner'))
+            //here we are telloing reacr dom to take the comppnent  and render it inside DOM 
+        
+        </script>
 
     
 </body>
