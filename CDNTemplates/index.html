@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Web site</h1>  <iframe src="https://cricfree.live/live/embed/star-hindi" width="100%" height="100%" allowfullscreen="true" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" allowfullscreen></iframe>
-        
+    <h1> Web site</h1>  
+    <div id="TopID">
+    </div>
     <div id="banner">
       
     </div>
@@ -19,6 +20,13 @@
     </footer>
     <script type="text/babel">
         const var1="Welcome to React JS"
+        // const handleClick=(e) =>{
+        //     console.log('Clicked JS Button')
+        //     console.log(e)
+
+
+
+        // }   
         // We are going to create React comppnent which is a function, Here we create a comppnent functionality and create template 
         const BannerId=() =>{
             return(
@@ -28,16 +36,28 @@
             <p>{var1}</p>
             <p> Todays's Date : {new Date().toDateString() } </p> 
             <p> Random Number : {Math.random()*100}</p>
+           <p><button onClick={(e)=>  console.log(e)}> Click button </button></p>
 
             </div>
 
 
             )
             //render the compnent template to DOM to inject into HTML page
-        }        
+        } 
+        const url="https://cricfree.live/live/embed/star-hindi"
+        const TopID=() => {
+            
+            return (
+                <iframe src={url} width="100%" height="100%" allowfullscreen="true" marginheight="0" marginwidth="0" scrolling="no" frameborder="0" allowfullscreen></iframe>
+
+            )
+
+
+        }
     
-    
+        ReactDOM.render(<TopID/>,document.getElementById('TopID'))
         ReactDOM.render(<BannerId/>,document.getElementById('banner'))
+       
             //here we are telloing reacr dom to take the comppnent  and render it inside DOM 
         
         </script>
